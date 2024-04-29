@@ -10,9 +10,19 @@ Brief description of your project.
 
 ## Features
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Collect the images from the `jovianzm/Pexels-400k` dataset from huggingface
+- With these list of Images Create a function to generate synthetic `user_post` in addition to metadata
+- Store these post into a vector store
+- query from the vectorstore to show to the user
+- allow the user to give their natural language sentiment of the post 
+
+### Post metadata
+
+- image url
+- natural language user sentiment
+- image summary
+- post text
+
 
 ## Installation
 
