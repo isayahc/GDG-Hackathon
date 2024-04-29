@@ -1,13 +1,14 @@
 import gradio as gr
 
-def image_text_block(image: gr.Image, text: str):
-    return image, text
+def image_comment_block(image_url: str, comment: str):
+    return image_url, comment
 
 inputs = [
-    gr.Image(label="Input Image"),
-    gr.Textbox(lines=5, label="Input Text")
+    gr.Textbox(lines=5, label="Comment")
 ]
 
-outputs = gr.Image(label="Output Image", type="filepath")
+outputs = gr.Image(label="Image",)
 
-gr.Interface(fn=image_text_block, inputs=inputs, outputs=outputs).launch()
+gr.Interface(fn=image_comment_block, inputs=inputs, outputs=outputs, examples=[
+    ["https://images.pexels.com/videos/852286/free-video-852286.jpg", "This is a nice image!"]
+]).launch()
